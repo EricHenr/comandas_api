@@ -1,0 +1,35 @@
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhYmMiLCJleHAiOjE3MTMyMTU2MzZ9.P3ts4GXWOUdPGHInDJWQKZzEtJqU9PSYvyElzTMOy6A
+
+### Verbo GET – listar todos
+GET http://localhost:8000/cliente/ HTTP/1.1
+Authorization: Bearer {{token}}
+
+### Verbo GET – listar um
+GET http://localhost:8000/cliente/1 HTTP/1.1
+Authorization: Bearer {{token}}
+
+### Verbo POST – adicionar
+POST http://localhost:8000/cliente/ HTTP/1.1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "nome" : "Eric", 
+    "cpf" : "24534454535", 
+    "telefone" : "494545455434"
+}
+
+### Verbo PUT – atualiza
+PUT http://127.0.0.1:8000/cliente/1 HTTP/1.1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "nome" : "Eric Henrique", 
+    "cpf" : "12345678909", 
+    "telefone" : "49898989"
+}
+
+### Verbo DELETE – excluir
+DELETE http://127.0.0.1:8000/cliente/1 HTTP/1.1
+Authorization: Bearer {{token}}

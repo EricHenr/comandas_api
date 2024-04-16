@@ -5,6 +5,6 @@ class Funcionario(BaseModel):
     nome: str
     matricula: str
     cpf: str
-    telefone: str = None
+    telefone: str
     grupo: int
-    senha: str = None
+    senha: str

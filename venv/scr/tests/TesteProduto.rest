@@ -1,0 +1,37 @@
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhYmMiLCJleHAiOjE3MTI0OTU0MTN9.pVev7sJE9b8twxD9sCjVnTgVIUOac7CdbLw7IOk79jE
+
+### Verbo GET – listar todos
+GET http://localhost:8000/produto/ HTTP/1.1
+Authorization: Bearer {{token}}
+
+### Verbo GET – listar um
+GET http://localhost:8000/produto/1 HTTP/1.1
+Authorization: Bearer {{token}}
+
+### Verbo POST – adicionar
+POST http://localhost:8000/produto/ HTTP/1.1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "nome" : "Pastel",
+    "descricao": "Carne moida com queijo",
+    "foto": "sddfdfdf534345gfdgdfg@#dd",
+    "valor_unitario": 12
+}
+
+### Verbo PUT – atualiza
+PUT http://127.0.0.1:8000/produto/1 HTTP/1.1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "nome" : "Coxinha",
+    "descricao": "Carne frango",
+    "foto": "adadasd45645fg@#dd",
+    "valor_unitario": 15
+}
+
+### Verbo DELETE – excluir
+DELETE http://127.0.0.1:8000/produto/1 HTTP/1.1
+Authorization: Bearer {{token}}

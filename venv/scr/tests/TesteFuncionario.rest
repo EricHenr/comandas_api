@@ -1,0 +1,41 @@
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhYmMiLCJleHAiOjE3MTMyMTU2MzZ9.P3ts4GXWOUdPGHInDJWQKZzEtJqU9PSYvyElzTMOy6A
+
+### Verbo GET – listar todos
+GET http://localhost:8000/funcionario/ HTTP/1.1
+Authorization: Bearer {{token}}
+
+### Verbo GET – listar um
+GET http://localhost:8000/funcionario/10 HTTP/1.1
+Authorization: Bearer {{token}}
+
+### Verbo POST – adicionar
+POST http://localhost:8000/funcionario/ HTTP/1.1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "nome" : "Peter Parker", 
+    "matricula" : "12345", 
+    "cpf" : "24534454535", 
+    "telefone" : "494545455434", 
+    "grupo" : 1,
+    "senha" : "bolinhas"
+}
+
+### Verbo PUT – atualiza
+PUT http://127.0.0.1:8000/funcionario/2 HTTP/1.1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "nome" : "Bolinhas dos Testes", 
+    "cpf" : "12345678909", 
+    "telefone" : "49898989", 
+    "senha" : "abc", 
+    "matricula" : "54321", 
+    "grupo" : 2
+}
+
+### Verbo DELETE – excluir
+DELETE http://127.0.0.1:8000/funcionario/3 HTTP/1.1
+Authorization: Bearer {{token}}
