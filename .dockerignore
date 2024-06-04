@@ -1,0 +1,8 @@
+__pycache__/
+venv/
+Include/
+Scripts/
+share/
+pyvenv.cfg
+.idea
+.vscode
